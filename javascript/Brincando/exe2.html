@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.w3schools.com/jsref/jsref_obj_string.asp">W3School</a><br>
+</body>
+
+<script>
+    //propriedade length
+   
+    var nome = ' Jorge Sant Ana ';
+    
+    // document.write('Jorge Sant Ana'.length);
+    // document.write('Jorge Sant Ana'.charAt(7));//exibe ao caracter
+    // document.write(nome.indexOf('a')); //procura a primeira ocorrencia do caracter
+    // document.write(nome.replace('Sant Ana', 'Silva')); //substituir string em textos
+    // document.write(nome.substr(0,5)); //recorta uma parte da string
+    // document.write(nome.toLowerCase()); //converte para carcteres minusculos
+    // document.write(nome.toUpperCase()); //converte para carcteres maiusculo
+    //document.write('-'+nome.trim()+'-'); //remove os espaços em branco das extremidades
+    // document.write(nome.split(' ')); //Divide uma string em uma matriz de substrings
+    
+    var str = nome.trim().split(' '); //Divide uma string em uma matriz de substrings
+    document.write(str[0]);
+</script>
+
+</html>

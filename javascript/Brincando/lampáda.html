@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Teste JavaScript</title>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            background: black;
+            color: white;
+        }
+        img#luz{
+            width: 25%;
+        }
+        input#x {
+            font: normal 18pt Arial;
+            width: 100px;
+            color: white;
+            background: red;
+            border-radius: 45px;
+            height: 50px;
+        }
+
+        input#desligar {
+            background: rgb(68, 70, 68);
+            left: 496px;
+            position: absolute;
+            width: 92px;
+            top: 332px;
+            height: 105px;
+        }
+
+        input#ligar {
+            background: white;
+            left: 588px;
+            position: absolute;
+            width: 92px;
+            top: 332px;
+            height: 105px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="text">Lampada</h1>
+    <img src="imagens/lampada-apagada.jpg"  id="luz" onmousemove="mudarLampada(1)" onmouseout="mudarLampada(2)" onclick="mudarLampada(3)"/>
+    <input type="button" id="x" value="restart" onclick="restart()">
+    <input type="button" id="ligar" onclick="ligar()">
+    <input type="button" id="desligar" onclick="desligar()">
+    
+</body>
+<script>
+        var quebrada = false;
+
+        function acesso () {
+            var ligar = document.querySelector("input#ligar");
+            var desligar = document.querySelector("input#desligar");
+            var text = document.getElementById("text");
+            var diaNoite = document.querySelector("body");
+            ligar.style.background = 'rgb(68, 70, 68)';
+            desligar.style.background = 'white';
+            diaNoite.style.background = 'white';
+            text.style.color = 'black';
+        }
+
+        function apagado() {
+            var ligar = document.querySelector("input#ligar");
+            var desligar = document.querySelector("input#desligar");
+            var text = document.getElementById("text");
+            var diaNoite = document.querySelector("body");
+            ligar.style.background = 'white';
+            desligar.style.background = 'rgb(68, 70, 68)';
+            diaNoite.style.background = 'black';
+            text.style.color = 'white';
+        }
+        
+        function mudarLampada(tipo) {
+            
+            if(tipo == 1){
+                arquivo = "imagens/lampada-acesa.jpg";
+                if(!quebrada){
+                    acesso();
+                }
+            } 
+            if ( tipo == 2 ){
+                arquivo = "imagens/lampada-apagada.jpg";
+                if(!quebrada){
+                    apagado();
+                }
+            } 
+            if ( tipo == 3 ){
+                arquivo = "imagens/lampada-quabrada.jpg";
+                apagado();
+            }
+            
+            if(!quebrada){
+                document.getElementById("luz").src = arquivo; 
+                if(tipo == 3){
+                    quebrada = true; 
+                }
+            }
+        }
+
+        function restart(){
+            quebrada = false;
+            document.getElementById("luz").src = "imagens/lampada-apagada.jpg";
+            apagado();
+        }
+
+        function ligar(){
+            if(!quebrada){
+                document.getElementById("luz").src = "imagens/lampada-acesa.jpg";
+                acesso();
+            }
+        }
+
+        function desligar(){
+            if(!quebrada){
+                document.getElementById("luz").src = "imagens/lampada-apagada.jpg";
+                apagado();
+            }
+        }
+        
+    </script>
+</html>

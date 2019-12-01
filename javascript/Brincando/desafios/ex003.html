@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script>
+        
+        var nome = prompt('Qual o seu nome?')
+        var altura = parseFloat(prompt('Qual sua altura ' +nome+ '? ~Em centimetros~'))
+        var peso = parseFloat(prompt('Qual seu peso '+ nome +'?'))
+
+        altura /=100
+
+        m = (peso / (altura*altura))
+
+        document.write(m +'<br />')
+
+        if (m < 16){
+            document.write('Baixo peso muito grave')
+
+        }else if (m >= 16 && m < 16.99){
+            document.write('Baixo peso grave')
+
+        }else if (m >=17 && m <= 18.49){
+            document.write('Baixo peso')
+
+        }else if (m >= 18.50 && m <= 24.99){
+            document.write('Peso normal')
+
+        }else if (m >= 25 && m <= 29.99){
+            document.write('Sobrepeso')
+
+        }else if (m >= 30 && m <= 34.99){
+            document.write('Obesidade grau I')
+
+        }else if (m >=35 && m <= 39.99){
+            document.write('Obesidade grau II')
+
+        }else{
+            document.write('Obesidade grau III ')
+        }
+        
+                               
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
