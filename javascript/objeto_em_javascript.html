@@ -1,0 +1,68 @@
+<html>
+<head>
+<script language="JavaScript">
+    function Carro(){
+        var Marca = "Sem marca";
+        var Modelo = "Sem modelo";
+        this.SetMarca = SetMarca;
+        this.SetModelo = SetModelo;
+        this.GetMarca = DisplayMarca;
+        this.GetModelo = DisplayModelo; 
+            
+        function DisplayMarca(){
+            alert(Marca);
+        }
+            
+        function DisplayModelo(){
+            alert(Modelo);
+        }
+            
+        function SetMarca(_marca) {
+            Marca = _marca;
+        }
+            
+        function SetModelo(_modelo) {
+            Modelo = _modelo;
+        }
+            
+    }
+        var carro = new Carro();
+        carro.SetMarca("Ford");
+        carro.SetModelo("Ka");
+        carro.GetMarca(); 
+        carro.GetModelo(); 
+
+</script>
+</head>
+</body>
+</html>
+
+<!-- <html>
+<body>
+  <script type="text/javascript">
+    carro = {
+        Marca : "Ford",
+        Modelo : "Ka",
+        Caracteristicas : ["Preto", 1.0, "2 portas"],
+          
+        exibirDetalhes : function(){
+          alert("Marca: " + this.Marca + " - Modelo: " + this.Modelo)
+        }  
+    }
+      
+    carro.exibirDetalhes();
+    alert(carro.Caracteristicas[0])
+       
+    var Pessoa = { nome : "Maria", idade : 30, sexo: "F" } 
+      
+    var mapa = { 
+        cantoSuperiorEsquerdo : { x : 1, y : 1 },
+        cantoSuperiorDireito : { x : 10, y : 1 },
+        cantoInferiorEsquerdo : { x : 1, y : 10 },
+        cantoInferiorDireito : { x : 10, y : 10 }
+    }
+      
+    alert(mapa.cantoInferiorDireito.x);      
+  </script>
+</body>
+</html> -->
