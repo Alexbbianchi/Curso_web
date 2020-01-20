@@ -2,22 +2,9 @@ var carro = {
     portas: Number,
     marca: String
 }
-
 carro.portas = 4;
 carro.marca = "Chavrolet"
 
-
-// function teste() {
-//     if(carro.portas === 4){
-//         modelo = "Modelo 4 portas";
-//         console.log(modelo);
-//     }
-//     else{
-//         modelo = "Modelo 2 portas";
-//         console.log(modelo);
-//     }
-// }
-// teste();
 var modelo = carro.portas === 2 ? "Modelo 4 portas" : "Modelo 2 portas";
 console.log( modelo );
 
@@ -28,6 +15,7 @@ function gerar ()
     var input = parseInt( document.getElementById( "data" ).value );
     gerarData( input );
 }
+
 function gerarData ( input )
 {
 
@@ -74,4 +62,13 @@ function gerarData ( input )
     var relogio = ( horas + ":" + minutos + ":" + segundos );
 
     document.getElementById( "div" ).innerHTML = ( calendario + relogio );
+}
+
+function converter()
+{
+    var stringona = document.getElementById( "stringona" ).value;
+    stringona = stringona.replace(/\d+/g , function ok(x){x = "";return x;}).trim();
+ 
+    document.getElementById( "div2" ).innerHTML = stringona;
+
 }

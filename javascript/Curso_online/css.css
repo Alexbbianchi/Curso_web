@@ -31,3 +31,40 @@ body{
     font-size: 30px;
     color: white;
 }
+
+#stringona{
+    width: 35%;
+    height: 30px;
+    border-radius: 15px 0 0 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#btn2{
+    width: 15%;
+    height: 36px;
+    border-radius:  0 15px 15px 0 ;
+    font-size: 20px;
+    background-image: linear-gradient(
+        rgb(0, 0, 0), 
+        rgb(48, 48, 54),
+        rgb(29, 27, 23)
+    );
+    color : white;
+
+}
+
+#div2{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.container{
+    border-style: solid;
+  border-width: 50px 10px 4px 20px;
+}
+
+#users{
+    color: white;
+}
