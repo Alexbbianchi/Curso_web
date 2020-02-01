@@ -1,0 +1,14 @@
+
+input.in{
+    width: 20%;
+    background: black;
+    color: white;
+}
+input.in:hover{
+    background: white;
+    color: black;
+}
+button.btn:hover{
+    background: white;
+    color: black
+}

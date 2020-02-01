@@ -1,0 +1,46 @@
+.container{
+    padding: 30px;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to bottom, #000000, #5f5658 100%);
+}
+
+.moedaName{
+    color: white;
+}
+
+.select{
+    border: 10px solid rgba(0, 0, 0, 0);
+}
+.inputConversor{
+    border-radius: 15px 0 0 15px;
+    width: 70%;
+    height: 30px;
+    text-align: center;
+}
+
+.btn{
+    border-radius: 0 15px 15px 0;
+    background: #3b3d3b8e;
+    color: white;
+    height: 30px;
+    width: 30%;
+}
+
+.linha{
+    margin: 40px 0 0 0;
+    text-align: center;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+}
+
+.App{
+    /* max-width: 900px; */
+    height: 30%;
+    width: 45%;
+    margin: auto;
+}
