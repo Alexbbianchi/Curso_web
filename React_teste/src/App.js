@@ -10,7 +10,7 @@ import {
   // UseRefComponent,
   // Counter,
   // Rbx,
-  AppComponent ,
+  // AppComponent ,
   // List,
   // ListRepositories,
   // Coordinate,
@@ -18,7 +18,8 @@ import {
   // Contador2,
   // Component,
   // Clock,
-  SelectComponent
+  // SelectComponent,
+  SideTransfer
 } from './Component/imports'
 
 // import { Home } from './pages/imports'
@@ -29,6 +30,7 @@ function App() {
     <div className="App">
       {/* <SelectComponent /> */}
         {/* <AppComponent /> */}
+        <SideTransfer />
     </div>
   );
 }
