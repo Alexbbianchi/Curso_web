@@ -27,8 +27,8 @@ function App() {
   
   return (
     <div className="App">
-      {/* <SelectComponent /> */}
-        {/* <AppComponent /> */}
+      <SelectComponent />
+        <AppComponent />
     </div>
   );
 }

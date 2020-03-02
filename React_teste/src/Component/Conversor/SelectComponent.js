@@ -9,7 +9,7 @@ import { Select } from 'rbx';
 
 function SelectComponent() {
   const [valorA, setValorA] = useState('USD');
-  const [valorB, setValorB] = useState('BRL');
+  const [valorB, setValorB] = useState('USD');
 
   return (
     <>
@@ -17,7 +17,7 @@ function SelectComponent() {
       <div className="container">
         <Select.Container color="primary" className="select">
           <Select onChange={(e) => setValorA(e.target.value)}>
-            <Select.Option value="USD" >Dolar EUA</Select.Option>
+            <Select.Option value="USD">Dolar EUA</Select.Option>
             <Select.Option value="CAD">Dolar Canadense</Select.Option>
             <Select.Option value="EUR">Euro</Select.Option>
             <Select.Option value="BRL">Real Brasileiro</Select.Option>
@@ -32,7 +32,7 @@ function SelectComponent() {
         </Select.Container>
         <Select.Container color="danger" className="select">
           <Select onChange={(e) => setValorB(e.target.value)}>
-          <Select.Option value="USD" >Dolar EUA</Select.Option>
+          <Select.Option value="USD">Dolar EUA</Select.Option>
             <Select.Option value="CAD">Dolar Canadense</Select.Option>
             <Select.Option value="EUR">Euro</Select.Option>
             <Select.Option value="BRL">Real Brasileiro</Select.Option>
