@@ -11,22 +11,44 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button onclick="calculadora('+')">+</button>
+    <button onclick="calculadora('-')"> - </button>
 </body>
     <script>
-          let p = new Promise((resolve, reject) => {
-              let a = 1 + 1
-            if(!a==2){
-                resolve('Success')
-            } else {
-                reject('Failed')
-            }
-          }) 
+        //   let p = new Promise((resolve, reject) => {
+        //       let a = 1 + 1
+        //     if(!a==2){
+        //         resolve('Success')
+        //     } else {
+        //         reject('Failed')
+        //     }
+        //   }) 
           
-          p.then((message) => {
-              console.log('This is in the than ' + message)
-          }).catch((err) => {
-              console.log('This is the catch ' + err)
-          })
+        //   p.then((message) => {
+        //       console.log('This is in the than ' + message)
+        //   }).catch((err) => {
+        //       console.log('This is the catch ' + err)
+        //   })
+
+          function calculadora(value){
+            var result = (value == '+') ? (soma(5, 8)) : subt(5, 8) ;
+            return console.log(result)
+          }
+
+          function soma(x, y){
+            var resultado = x+y;
+            return resultado;
+          }
+          function subt(x, y){
+            var resultado = x-y;
+            return resultado;
+          }
+
+          function parimp(n){
+              return n%2 ==0 ? 'par' : 'impar'
+          }
+
+          alert(parimp(11))
+          
     </script>
 </html>
