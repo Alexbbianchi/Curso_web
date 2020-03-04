@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: rgb(115, 156, 231);
+            margin: 10px;
+            border: 5px solid #eee;
+            box-shadow: 0 3px 3px rgb(0, 0, 0);
+            font: normal 18pt Arial;
+            padding: 50px;
+            width: 600px;
+            display: inline-block;
+        }
+        
+        input#color {
+            font: normal 20pt Arial;
+            color: white;
+            background: rgb(219, 80, 80);
+            box-shadow: 0 3px 3px rgb(36, 35, 35);
+            display: inline-block;
+            margin: 10px;
+        }
+        
+        input#txt {
+            font: normal 20pt Arial;
+            color: rgb(119, 61, 61);
+            background: #eee;
+            box-shadow: 0 3px 3px rgb(36, 35, 35);
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Teste se você é Brasileiro</h1>
+
+    País: <input type="text" name="txt" id="txt">
+    <input type="button" value="Verificar" id="color" onclick="verificar()">
+    <dev id="res"></dev>
+    <script>
+        function verificar() {
+            var txt = window.document.getElementById('txt')
+            var teste = (txt.value)
+            var resposta = window.document.getElementById('res')
+
+            if (teste == 'Brasil' || teste == 'brasil' || teste == 'BRASIL') {
+                resposta.innerHTML = `Você é Brasileiro!`
+            } else {
+                resposta.innerHTML = `Você é estrangeiro!`
+            }
+        }
+    </script>
+</body>
+
+</html>

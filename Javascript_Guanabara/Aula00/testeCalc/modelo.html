@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <section>
+        <div>
+            <form name="calc">
+                <input type="text" name="visor">
+                <p>
+                    <input type="button" value="1" onclick="botao( value )">
+                    <input type="button" value="2" onclick="botao( value )">
+                    <input type="button" value="3" onclick="botao( value )">
+                    <input type="button" value="/" onclick="botao( value )">
+                </p>
+                <p>
+                    <input type="button" value="4" onclick="botao( value )">
+                    <input type="button" value="5" onclick="botao( value )">
+                    <input type="button" value="6" onclick="botao( value )">
+                    <input type="button" value="*" onclick="botao( value )">
+                </p>
+                <p>
+                    <input type="button" value="7" onclick="botao( value )">
+                    <input type="button" value="8" onclick="botao( value )">
+                    <input type="button" value="9" onclick="botao( value )">
+                    <input type="button" value="-" onclick="botao( value )">
+                </p>
+                <p>
+                    <input type="button" value="=" id="igual">
+                    <input type="button" value="+" id="soma">
+                </p>
+            </form>
+        </div>
+        <div>
+
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

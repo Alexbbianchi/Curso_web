@@ -1,0 +1,40 @@
+input {
+  background: rgb(155, 96, 96);
+  color: white;
+  border-radius: 5px;
+}
+div#saida {
+  background: rgb(121, 94, 139);
+  width:  202px;
+  margin-top : 10px;
+  text-align: center;
+  color: white;
+
+}
+
+#btn {
+  width: 100px;
+  padding: 20px;
+  background: rgb(2, 218, 135);
+}
+#btn2 {
+    width: 100px;
+    padding: 20px;
+    background: rgb(110, 9, 43);
+  }
+header {
+  color: white;
+  font: normal 50pt Arial;
+  text-align: center;
+}
+body {
+  background: rgb(117, 117, 211);
+}
+section {
+  width: 90%;
+  background: white;
+  border-radius: 5px;
+  padding: 50px;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0);
+  margin: Auto;
+}

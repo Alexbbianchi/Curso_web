@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                <input id="num1" type="number" placeholder="Digite um número">
+                <select id="operacao" class="form-control">
+                    <option value="">--Selecione uma operação</option>
+                    <option value="1">Subtração</option>
+                    <option value="2">Adição</option>
+                    <option value="3">Multiplicação</option>
+                    <option value="4">Divisão</option>
+                </select>
+                <input id="num2" type="number" placeholder="Digite um número" />
+            </p>
+            <input type="button" id="btn" value="Calcular" onclick="calcular()">
+        </div>
+        <div>
+            Resultado: <input id="resultado" type="text" class="res" readonly/>
+            <!--p id="res"></p-->
+        </div>
+    </section>
+    <footer>
+        <p>&copy; AlexBianchi</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
