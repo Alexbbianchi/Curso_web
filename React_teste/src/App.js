@@ -19,7 +19,8 @@ import {
   // Component,
   // Clock,
   // SelectComponent,
-  SideTransfer
+  // SideTransfer,
+  AnalizadorDeNumeros
 } from './Component/imports'
 
 // import { Home } from './pages/imports'
@@ -28,10 +29,7 @@ function App() {
   
   return (
     <div className="App">
-      <SelectComponent />
-      {/* <SelectComponent /> */}
-        {/* <AppComponent /> */}
-        <SideTransfer />
+      <AnalizadorDeNumeros />
     </div>
   );
 }
