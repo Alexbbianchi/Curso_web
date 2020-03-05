@@ -8,7 +8,7 @@ function List() {
         { id: 3, name: "repo-3"}
     ]);
 
-    function handleAddRepository() {
+    function handlerAddRepository() {
         setRepositories([
             ...repositories,
             { id: Math.random(), name: "Novo repo" }
@@ -21,7 +21,7 @@ function List() {
                 <li key={repo.id}>{repo.name}</li>
                 ))}
             </ul>
-            <Button onClick={handleAddRepository}>Adicionar</Button>
+            <Button onClick={handlerAddRepository}>Adicionar</Button>
         </>
     );
 }

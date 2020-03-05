@@ -6,7 +6,7 @@ import Counter from './Hooks/useRefComponentValue';
 import Rbx from './Uikit e RBX/rbxComponent';
 import AppComponent from './Mensage/AppComponent';
 import List from './Lista/ListComponent';
-import ListRepositories from './Lista/ListRepositoryComponent.js.js';
+import ListRepositories from './Lista/ListRepositoryComponent.js';
 import Coordinate from './Coordinate/CoordinateComponent';
 import Contador from './Uikit e RBX/Contador';
 import Contador2 from './Uikit e RBX/Contador2';
@@ -15,7 +15,7 @@ import Clock from './Date/Clock'
 import Conversor from './Conversor/Conversor'
 import SelectComponent from './Conversor/SelectComponent'
 import SideTransfer from './SideTransfer/SideTransfer'
-import AnalizadorDeNumeros from './AnalizadorDeNumeros/index'
+import AnalizadorDeNumeros from './AnalizadorDeNumeros/analizador'
 
 
 export {
