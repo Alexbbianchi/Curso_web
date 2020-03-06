@@ -1,17 +1,18 @@
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
 import './style.css'
 
-import ListNumberAdd from './component/listNumberAdd';
+import FormComponent from './component/FormComponent';
+import ListComponent from './component/ListComponent';
 
 function AnalizadorDeNumeros ()
 {
 
-    const [ valueList,setValueList ] = useState( [ [] ] );
-    const [ valueInput,setValueInput ] = useState( [] );
-
-    const handlerAddItemToList = () => {
-        setValueInput( [
-            ...valueInput, valueInput
+    const [ valueList,setValueList ] = useState( [] );
+    
+    const handlerAddItemToList = ( value ) =>
+    {
+        setValueList( [
+            ...valueList,value
         ] );
     }
     return (
@@ -22,14 +23,9 @@ function AnalizadorDeNumeros ()
                 </header>
 
                 <section>
-                    <div >
-                        <label>Número (entre 1 e 100):</label>
-                        <input />
-                        <button onClick={ handlerAddItemToList }>Adicionar</button>
-                    </div>
-                    <div>
-                        <ListComponent valueInput={valueInput} />
-                    </div>
+                    <label>Número (entre 1 e 100):</label>
+                    <FormComponent onSave={handlerAddItemToList}/>
+                    <ListComponent valueList={valueList} />
                 </section>
 
                 <footer>
@@ -38,23 +34,12 @@ function AnalizadorDeNumeros ()
             </div>
         </>
     );
-}
+};
 
-function ListComponent ({valueInput})
-{
-    return (
-        <>
-            {valueInput.map(valueInput => {
-                return (
-                    <div>
-                        <span>Valor {valueInput} selecionado</span>
-                    </div>
-                );
-            })}
-        </>
-    );
-}
+
+
+
 
 export default AnalizadorDeNumeros;
-24:14
+
 //https://www.youtube.com/watch?v=NoVIe5l1XvE&list=PLpQnvZKeNX4HuwlzMdFpykBLsd_zF82QN
