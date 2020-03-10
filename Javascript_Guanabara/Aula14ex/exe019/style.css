@@ -23,6 +23,9 @@ footer {
     font-style: italic;
 }
 
+select#flista{
+    width: 150px;
+}
 #btn {
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgb(0, 0, 0);

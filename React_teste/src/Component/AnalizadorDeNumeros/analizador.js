@@ -9,11 +9,13 @@ function AnalizadorDeNumeros ()
 
     const [ valueList,setValueList ] = useState( [] );
     
-    const handlerAddItemToList = ( value ) =>
+    const handlerAddItemToList = ( value, setValue ) =>
     {
         setValueList( [
             ...valueList,value
         ] );
+
+        setValue('');
     }
     return (
         <>

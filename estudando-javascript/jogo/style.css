@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-padrao: #845EC2;
+    --segunda-cor: #FF9671;
+}
+
+body {
+    padding: 10px;
+    min-height: 100vh;
+
+    background-image: linear-gradient(to right bottom, #845ec2, #a55dbd, #c15db5, #d95fab, #ec64a0, #f46997, #fb708f, #ff7887, #ff7f80, #ff867a, #ff8e75, #ff9671);
+
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    padding: 20px;
+}
+
+section {
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, .75);
+    padding: 20px;
+    border-radius: 10px;
+    color: #666;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+#form {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.label-palpite {
+    display: inline-block;
+    color: var(--cor-padrao);
+}
+
+input {
+    margin: 10px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 2rem;
+    text-align: center;
+    width: 200px;
+    color: var(--cor-padrao);
+    font-weight: bold;
+    border: 2px solid var(--cor-padrao);
+    background-color: transparent;
+}
+
+/* label underline focus color */
+:focus {
+    outline: none;
+  }
+
+button {
+    display: inline-block;
+    width: 210px;
+    margin: 10px 0;
+    padding: 20px 10px ;
+    background-color: var(--cor-padrao);
+    color: #FFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+button:hover {
+    background-color: rgb(112, 76, 172);
+    color: #FFF;
+}
+
+#tentativas {
+    font-weight: bold;
+}
+
+#ultimoResultado span {
+    display: inline-block;
+    margin: 2px;
+    width: 30px;
+    height: 30px;
+    background: #333;
+    border-radius: 50%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    color: #FFF;
+}
+
+#baixoAlto {
+    color: var(--cor-padrao);
+    text-align: center;
+}
+
+#erro {
+    color: var(--cor-padrao);
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+footer {
+    padding: 30px;
+    font-size: 1rem;
+}
+
+footer a:link, footer a:visited  {
+    color: #FFF;
+    font-weight: bold;
+    transition-duration: .3s;
+}
+
+footer a:active, footer a:hover {
+    color: var(--cor-padrao);
+}

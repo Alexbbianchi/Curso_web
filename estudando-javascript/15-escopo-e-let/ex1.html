@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript - Escopo</title>
+</head>
+<body>
+
+    <h1>JavaScript</h1>
+    <h2>Escopo</h2>
+    
+
+    <script>
+    
+        // Escopo Global
+        let nome = "Alex"
+        console.log(nome);
+        
+        function imprimeNome() {
+            console.log(nome);
+            // let sobrenome = 'Bianchi' 
+            sobrenome = 'Bianchi' // Utilizar sempre 'let' ou 'var' para protejer a variável
+        }
+        imprimeNome()
+
+        console.log(sobrenome);
+        
+        
+        
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* 
+    * Aula sobre "Flexbox"
+    * Marcelo Pereira
+    * https://marcelopoars.github.io/
+    * https://github.com/marcelopoars/flexbox
+ */
+ 
+body,
+ul, 
+li, 
+p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    list-style: none;
+    color: #333;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+h1 {
+    color: #FFF;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-align: center;
+    background-color: rgba(0,0,0,.8);
+    margin: 0;
+    padding: 5px;
+    max-width: 700px;;
+}
+
+h2 {
+    text-align: center;
+    margin: 50px 0 10px 0;
+}
+
+img {
+    /* Máimo de 100% do container */
+    max-width: 100%;
+    /* display: block; */
+    border-radius: 3px;
+}
+
+
+.header {
+    background-color: #222;
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    flex: 0 0 180px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menu li {
+    margin-left: 5px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+    border-bottom: 3px solid #222;
+}
+
+.menu li a:hover {
+    border-bottom: 3px solid #FF0000;
+}
+
+
+/* Banner Full */
+.full-banner {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    justify-content: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 30px;
+}
+
+/* Container pai */
+.galeria {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+
+/* Itens filhos */
+.galeria > div {
+    margin: 10px;
+    /* flex-grow / flex-shrink / flex-basis */
+    flex: 1 1 200px;
+}
+
+
+footer {
+    background-color: #222;
+    margin-top: 30px;
+    padding: 30px 20px;
+}
+
+footer p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #999;
+}

@@ -9,7 +9,7 @@ function FormComponent ( {onSave} )
         <>
             <div >
                 <Input style={{ width: '50%' }}  onChange={ e => setValueInput( e.currentTarget.value ) } />
-                <Button type="primary" onClick={ () => onSave( valueInput ) }>Adicionar</Button>
+                <Button type="primary" onClick={ () => onSave( valueInput, setValueInput ) }>Adicionar</Button>
             </div>
         </>
     );
