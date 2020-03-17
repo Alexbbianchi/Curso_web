@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicios</title>
+</head>
+<body>
+    <div id="tela"></div>
+    <br><select id="flista" size="6" ></select>
+
+    <input id="input" type="number" />
+    <input type="button" onclick="experiencia()" value="Verificar"/>
+    <div id="tela2"></div>
+    <div id="tela3"></div>
+    
+    <script>
+        
+        //#region Exe01
+        var tela = document.querySelector('div#tela');
+        var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+
+        tela.innerHTML = `O usuário mora em ${endereco.cidade} / ${endereco.uf}, no bairro ${endereco.bairro}, na rua "${endereco.rua}" com
+nº ${endereco.numero}.`;
+        //#endregion
+        //#region Exe02
+        let lista = document.querySelector('select#flista');
+        function pares(x, y) {
+            var par = [];
+            for(x; x <= y; x++){
+                if(x % 2 == 0){
+                    let item = document.createElement('option')
+                    item.text = `${x}`
+                    lista.appendChild(item);
+                }
+            }
+        }
+        pares(32, 321);
+        //#endregion
+        //#region Exe03 
+        function temHabilidade(skills) {
+            let string = 'Javascript'
+            if(skills.indexOf(string) != -1) return true;
+            return false;
+        }
+        var skills = ["Javascript", "ReactJS", "React Native"];
+        console.log(temHabilidade(skills)); // true ou false
+        //#endregion
+        //#region Exe04
+        var input = document.querySelector('input#input');
+        var tela2 = document.querySelector('div#tela2');
+        function experiencia() {
+            var anos = Number(input.value);
+            var res = "";
+            if(anos<0) return alert(`${"Digite um valor válido"}`);
+            if(anos>=0 && anos<=1) return tela2.innerHTML = `${"Iniciante"}`;
+            if(anos>=1 && anos<=3) return tela2.innerHTML = `${"Intermediário"}`;
+            if(anos>=3 && anos<=6) return tela2.innerHTML = `${"Avançado"}`;
+            if(anos>=7 ) return tela2.innerHTML = `${"Jedi Master"}`;
+        }
+        //#endregion
+        //#region Exe04
+        var tela3 = document.querySelector('div#tela3');
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+        
+        for(var item of usuarios){
+            tela3.innerHTML += `<p>O ${item.nome} possui as habilidades: ${item.habilidades.join(', ')} </p> `;
+        }
+        //#endregion
+
+    </script>
+</body>
+</html>
+
+<!-- https://skylab.rocketseat.com.br/node/curso-java-script/group/manipulando-a-dom/lesson/eventos-inline -->
