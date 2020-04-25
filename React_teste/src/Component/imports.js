@@ -15,7 +15,7 @@ import Clock from './Date/Clock'
 import Conversor from './Conversor/Conversor'
 import SelectComponent from './Conversor/SelectComponent'
 import SideTransfer from './SideTransfer/SideTransfer'
-import AnalizadorDeNumeros from './AnalizadorDeNumeros/analizador'
+import AnalizadorDeNumeros from './AnalizadorDeNumeros/index'
 
 
 export {

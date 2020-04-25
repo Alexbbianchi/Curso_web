@@ -4,6 +4,7 @@ import './Component/Conversor/Conversor.css';
 
 import
 {
+  Conversor,
   // Container, 
   // Divider,
   // Relogio,
@@ -19,7 +20,7 @@ import
   // Contador2,
   // Component,
   // Clock,
-  // SelectComponent,
+  SelectComponent,
   // SideTransfer,
   AnalizadorDeNumeros
 } from './Component/imports'
@@ -31,7 +32,7 @@ function App ()
 
   return (
     <div className="App">
-      <AnalizadorDeNumeros />
+      <SelectComponent />
       {/* <Contador /> */ }
       {/* <Component /> */ }
       {/* <SelectComponent /> */ }

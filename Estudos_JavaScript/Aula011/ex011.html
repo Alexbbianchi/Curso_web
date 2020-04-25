@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro</title>
+    <style>
+        body{
+            background: rgb(47, 110, 228);
+        }
+
+        div#fundo {
+            margin-left: 76px;
+            margin-top: 60px;
+            background: white;
+            width: 800px;
+            height: 600px;
+            display: flex;
+            border-radius: 10px;;
+        }
+
+        div#valores {
+            display: inline-table;
+            text-align: center;
+            margin-top: 50px;
+            margin-left: 230px;
+        }
+        
+        input#button {
+            background-image: linear-gradient(to right, rgb(146, 199, 241), rgb(97, 155, 231), rgb(38, 105, 228));
+            color: white;
+            width: 100px;
+            border: 0px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="fundo">
+        <div id="valores">
+            <h2>Qual o seu país?</h2> 
+            <input type="text" name="country" id="country" placeholder="Digite ser país aqui">
+            <input type="submit" id="button" value="Verificar" onclick="verificar()">
+            <div id="res"></div>
+        </div>
+    </div>
+    <script>
+        function verificar() {
+            var country = document.querySelector('input#country').value;
+            var res = document.querySelector('div#res');
+            res.innerHTML = `<p>País : <strong>${country.toUpperCase()}</strong></p>`;
+            
+            if(country.toLowerCase() != 'brasil'){
+                res.innerHTML += `<p>Você é estrangeiro!</p>`;
+            } else {
+                res.innerHTML += `<p>Você é Brasileiro!</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
