@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos DOM</title>
     <style>
-        div#area {
+        input#agoraVai {
             font: normal 20pt Arial;
             background: rgb(0, 0, 0);
             color: white;
@@ -14,31 +14,31 @@
             line-height: 100px;
             text-align: center;
             border-radius: 50%;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div id="area"><p>Branco</p></div>
+    <input type="button" id="agoraVai" value="Branco" />
 
     <script>
-        var area = document.querySelector('div#area');
+        var agoraVai = document.querySelector('input#agoraVai');
         var corpo = document.querySelector('body');
-        var paragrafo = document.querySelector('p');
-        area.addEventListener('click', clicou);
+        agoraVai.addEventListener('click', clicou);
         var teste = false;
 
         function clicou() {
             if (teste == true){
                 teste = false;
                 corpo.style.background = 'black';
-                area.style.background = 'white';
-                area.style.color = 'black';
+                agoraVai.style.background = 'white';
+                agoraVai.style.color = 'black';
                 paragrafo.innerText = 'Preto';
             } else {
                 teste = true;
                 corpo.style.background = 'white';
-                area.style.background = 'black';
-                area.style.color = 'White';
+                agoraVai.style.background = 'black';
+                agoraVai.style.color = 'White';
                 paragrafo.innerText = 'Branco';
             }
 
