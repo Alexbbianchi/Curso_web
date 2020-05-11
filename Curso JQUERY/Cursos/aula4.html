@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQUERY</title>
+</head>
+<body>
+    <div class="div1">
+        <h2>H2 filho de DIV1</h2>
+        <p>P filho de DIV1 <span>SPAN filho de P</span></p>
+        <span>Span filho de DIV1</span>
+    </div>
+    <h2>H2 fora de DIV1</h2>
+    <p class="p1">P1 fora de DIV1</p>
+    <p>P2 fora de DIV1</p>
+    <p>P3 fora de DIV1</p>
+
+
+
+    <script src="./js/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h2').css('margin', '0'); 
+            $('p').css({margin: '0', color: 'blue'}); 
+            $('.div1').css({marginBottom: '20px', background: '#ccc'});
+            
+            //Filhas
+            $('.div1 span')
+                .hide()
+                .delay('1000')
+                .fadeIn(1000)
+                .css({color: 'green', fontSize: '15px'});
+
+                $('.div1 h2')
+                    .hide()
+                    .css({fontSize: '50px', color: 'red'})
+                    .fadeIn(800);
+
+                //Filhas diretas do Elementos
+                $('.div1 > span').css({color:'red'});
+
+                //Primeiro elemento após o Selecionado
+                $('.p1 + p').css({fontSize: '25px'});
+                //Atacando todos os elementos após o selecionado
+                $('.p1 ~ p').css({color: 'green'});
+        });
+    </script>
+</body>
+</html>

@@ -22,3 +22,22 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+button {
+    width: 100px;
+    height: 35px;
+    border-radius: 15px;
+    background: cornflowerblue;
+    border: 0;
+    color: #fff;
+    font-size: 15px;
+    box-shadow: 3px 3px 10px 1px #00000063;
+}
+
+button:focus{
+    outline: 0px auto -webkit-focus-ring-color;
+}
+button:hover{
+    background: #4c87f2;
+    box-shadow: 3px 3px 10px 1px #998686;
+}

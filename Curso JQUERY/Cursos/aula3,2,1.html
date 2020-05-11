@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQUERY</title>
+</head>
+<body>
+    <h1>Top top</h1>
+    <a href="#">Link 1</a>
+    <a href="#" class="link2">Link 2</a>
+    <a href="#" id="link3">Link 3</a>
+    <script src="./js/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h1')
+                .css('color','#35fee8')
+                .hide()
+                .delay('1000')
+                .fadeIn('slow')
+                .text('Curso Jquery')
+                .click(function(){
+                    $('body').css('background', 'red');
+                    $('h1').css('color', '#fff');
+                });
+
+            $('a').css({color: 'red',  display: 'block', fontSize: '20px' });
+            $('.link2').css('color', 'green');
+            $('#link3').css('color', '#blue');
+            $('*').css('margin', '0');
+            $('h1, #link3').css('border-bottom', 'solid 3px blue');
+        });
+    </script>
+</body>
+</html>
