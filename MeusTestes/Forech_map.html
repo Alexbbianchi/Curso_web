@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul id="ul">
+
+        </ul>
+    </div>
+    <script src="../Curso JQUERY/Testes/Projeto/js/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            const objeto = ['Alex', 'Jassika', 'Manoel', "teste"];
+            var lista = document.querySelector('#ul')
+            objeto.map((name) => {
+                lista.innerHTML += `<li>${name}</li>`;
+            });
+
+        });
+    </script>
+</body>
+</html>

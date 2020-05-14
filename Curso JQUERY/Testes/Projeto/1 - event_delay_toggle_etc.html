@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        button {
+            width: 100px;
+            height: 35px;
+            border-radius: 15px;
+            background: cornflowerblue;
+            border: 0;
+            color: #fff;
+            font-size: 15px;
+            box-shadow: 3px 3px 10px 1px #00000063;
+        }
+
+        button:focus{
+            outline: 0px auto -webkit-focus-ring-color;
+        }
+        button:hover{
+            background: #4c87f2;
+            box-shadow: 3px 3px 10px 1px #998686;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Teste esconder conteudo</h1>
+    </header>
+    <section>
+        <!-- 1º -->
+        <div>
+            <!-- <button id="btn1">Esconder</button>
+            <button id="btn2">Exibir</button> -->
+            <button id="inOut">Exibir</button>
+            <h3 class="conteudo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quidem tempore voluptas optio sequi? Dignissimos delectus pariatur nisi debitis dolor, aspernatur voluptate veniam quae facilis. Nemo laudantium eligendi dolorem reprehenderit!</h3>
+        </div>
+        <!-- 2º -->
+        <div class="box"></div>
+        <button class="starting">Go</button>
+        <!-- 3º -->
+        <div>
+            <button id="click">Click</button>
+            <div id="mensagem">Olá mundo</div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Alex8ianchi</p>
+    </footer>
+    <script src="./js/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+        // fadeIn, fadeOut, show, hide, toggle
+
+        $('#inOut').click(function(){
+            $('h3').toggle(1000);
+        });
+        //********************************** */
+        $('.box').css({
+            position        : 'relative',
+            left            : '0',
+            width           : '100px',
+            height          : '100px',
+            backgroundColor : 'pink'
+        }).animate({
+            width           : '200px',
+            height          : '200px',
+            left            : '200'
+        },5000).delay(1000)
+        .animate({
+            width           : '100px',
+            height          : '100px',
+            left            : '0'
+        },5000);
+        /************************************ */
+        $('.starting').css({
+            fontSize: '2rem',
+            backgroundColor: '#000',
+            color: '#fff',
+            padding: 'rem 2rem'
+        }).on('click', function (){
+            console.log('Deu certo');
+        });
+        /************************************* */
+        var button = $('#click');
+        var mensagem = $('#mensagem');
+
+        button.on('click', function() {
+            mensagem.delay(5000).fadeOut();
+        })
+
+        });
+    </script>
+</body>
+</html>
