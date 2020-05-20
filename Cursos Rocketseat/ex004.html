@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="input" />
+    <button onclick="experiencia()">Testar</button>
+    <script>
+        function experiencia() {
+            var anosEstudo = document.querySelector('#input');
+            anosEstudo = Number(anosEstudo.value);
+
+            if(anosEstudo < 0) return console.log('Valor invalido');
+
+            if(anosEstudo >= 0 && anosEstudo <= 1){
+                console.log(`${anosEstudo} anos é Iniciante`);
+            } else if(anosEstudo > 1 && anosEstudo <= 3){
+                console.log(`${anosEstudo} anos é Intermediario`);
+            } else if(anosEstudo >= 3 && anosEstudo <= 6){
+                console.log(`${anosEstudo} anos é Avançado`);
+            } else {
+                console.log(`${anosEstudo} anos é Jedi Master`);
+            }
+
+        // código aqui
+        }
+        // De 0-1 ano: Iniciante
+        // De 1-3 anos: Intermediário
+        // De 3-6 anos: Avançado
+        // De 7 acima: Jedi Master
+    </script>
+</body>
+</html>
