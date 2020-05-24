@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="criar();">Criar</button>
+    <div id="elementoPai"></div>
+    <script>
+        var elementoPai = document.getElementById('elementoPai');
+        
+
+        const criar = () => {
+            var createDiv = document.createElement('div');
+            // var att = document.createAttribute('onmouseover');
+            // att.value = "getRandomColor()";
+            // createDiv.setAttributeNode(att);
+            createDiv.style.backgroundColor = '#000';
+            createDiv.style.width = '100px';
+            createDiv.style.height = '100px';
+            createDiv.style.marginTop = '10px';
+
+            createDiv.onmouseover = () => {
+                createDiv.style.background = getRandomColor();
+            }
+            elementoPai.appendChild(createDiv);
+        }
+
+        function getRandomColor() { // função cria nova cor random
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            
+            return color;
+        }
+
+    </script>
+</body>
+</html>

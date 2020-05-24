@@ -9,7 +9,7 @@ const App = () => html`
         }
     </style>
     <main class="container">
-        <wc-title title="Video | Web Component"></wc-title>
+        <wc-title title="TodoList | Web Component"></wc-title>
         <wc-todo></wc-todo>
     </main>
 `

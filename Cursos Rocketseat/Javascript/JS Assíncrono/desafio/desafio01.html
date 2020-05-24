@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="idade">
+    <button>Testar</button>
+
+    <script>
+
+        var btn = document.querySelector('button');
+        
+        function checaIdade(idade) {
+            
+            return new Promise(function(resolve, reject) {
+                if(idade) {
+                    if(idade >= 18) {
+                        resolve('Maior de 18');
+                    } else {
+                        reject('Erro na requisição');
+                    }
+                }
+            })
+
+        }
+
+        function testar() {
+            var idade = Number(document.querySelector('input#idade').value);
+            checaIdade(idade)
+            .then(function() {
+                console.log("Maior que 18");
+            })
+            .catch(function() {
+                console.log("Menor que 18");
+            });
+        }
+
+        btn.onclick = testar;
+    </script>
+</body>
+</html>
