@@ -1,23 +1,34 @@
 var btn = document.querySelector('button');
+var usuario = document.querySelector('#user');
+var root = document.querySelector('#root');
 
 const lowerName = (name) => name.toLowerCase();
 
-function request() {
-    var usuario = document.querySelector('#user').value;
-    var stringUserGit = `https://api.github.com/users/${lowerName(usuario)}/repos`;
+function searchGitRepositories() {
+
+    root.innerHTML = 'Carregando...';
+
+    var user = lowerName(usuario.value);
+    var stringUserGit = `https://api.github.com/users/${user}/repos`;
 
     axios.get(stringUserGit)
         .then((response)=> {
             repositorios(response);
         })
-        .catch((error) => {
-            console.warn(error);
-        });
+        .catch((err) => {
+            error(err)
+        });   
 }
 
 function repositorios(response) {
     var repositories = response.data;
-    
+
+    if(repositories.length == 0){
+        return root.innerHTML = 'Usuário não possui repositórios';
+    }
+
+    root.innerHTML = `${lowerName(usuario.value)}`;
+
     for(var repository of repositories ){
         var lista = document.querySelector('ul');
 
@@ -26,9 +37,13 @@ function repositorios(response) {
         item.appendChild(itemText);
         lista.appendChild(item);
     }
+    usuario.value = '';
+    usuario.focus();
 }
 
+function error(err) {
+    console.log(err);
+    root.innerHTML = 'Usuário inválido';
+}
 
-
-
-btn.onclick = request;
+btn.onclick = searchGitRepositories;
