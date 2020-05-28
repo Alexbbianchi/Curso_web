@@ -15,16 +15,15 @@ function renderTodos() {
 
     for (let todo of todos) { //varre o array 'todos'
         var todoElement = document.createElement('li'); // cria um elemento li 
+        todoElement.setAttribute('class', 'item'); // cria um atributo 'href' no 'a'
         var todoText = document.createTextNode(todo); // põe o volor contido em 'todo' na variavel todoText
 
-        var linkElement = document.createElement('a'); //cria um elemento a
-        linkElement.setAttribute('href', '#'); // cria um atributo 'href' no 'a'
-
-
+        var linkElement = document.createElement('button'); //cria um elemento a
+        linkElement.setAttribute('class', 'delete'); // cria um atributo 'href' no 'a'
         // var pos = todos.indexOf(todo);
         linkElement.setAttribute('onclick', 'deleteTodo('+ id +')')
         
-        var linkText = document.createTextNode('Excluir'); // Cria uma variavel com a string 'Excluir'
+        var linkText = document.createTextNode('X'); // Cria uma variavel com a string 'Excluir'
         linkElement.appendChild(linkText); // põe o texto do linkText no link 'a'
        
         todoElement.appendChild(todoText); //põe o texto do todoText na li
@@ -39,6 +38,8 @@ renderTodos(); // chama função que renderiza
 
 function addTodo() {
     var todoText = inputElement.value; // pega o valor do input
+    
+    if(todoText.length <= 0) return alert('Dígite algo!!!');
 
     todos.push(todoText); // adiciona ao array
     inputElement.value = ''; // limpa o input

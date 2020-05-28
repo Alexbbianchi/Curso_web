@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: rgba(1, 38, 113, 0.81);
+    font: normal 15pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 70%;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+div#app{
+    padding: 15px;
+}
+div#box {
+    display: inline;
+}
+input.input {
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    color: #595959;
+    font-size: 1.1rem;
+    outline: none;
+    padding: .5rem 1rem;
+    vertical-align: middle;
+    width: 75%;
+}
+input.input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
+button.button {
+    background: #00cc99;
+    border: none;
+    border-radius: 3px;
+    color: #fdfdfd;
+    outline: none;
+    padding: .75rem;
+    height: 40px;
+    float: right;
+    width: 20%;
+}
+button.button:hover {
+    background: #00b386;
+    cursor: pointer;
+}
+ul.list {
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+}
+li.item {
+    list-style: none;
+    margin: 0 0 5px 0px;
+}
+button.delete {
+    border: 0;
+    background-color: #b30000b0;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 0px 0px 0px 10px;
+    padding: 1px 5px 0px 5px;
+    outline: none;
+}
+button.delete:hover {
+    background: #b30000e8;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+    input.input {
+        width: 70%;
+    }
+    button.button{
+        width: 25%;
+    }
+    
+}
+@media screen and (max-width: 560px) {
+    section {
+        width: 95%;
+    }
+}
