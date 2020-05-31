@@ -61,6 +61,12 @@ function repositorios(response) {
     let p = document.querySelector('p');
     
     if(repositories.length == 0){
+
+        if(document.querySelector('img.logo')){
+            document.querySelector('img.logo').remove();
+            document.querySelector("h1").removeAttribute("class");
+        }
+        
         return p.innerHTML = `${upperCaseName(usuario.value)}: Usuário não possui repositórios`;
     }
 
@@ -90,6 +96,9 @@ function repositorios(response) {
 }
 
 function createUserLogo(repositories) {
+    var h1Element = document.querySelector('h1');
+    h1Element.setAttribute('class', 'h1Logo');
+
     var header = document.querySelector('header');
     var userLogo = document.createElement('img');
     userLogo.setAttribute('src', `${repositories[0].owner.avatar_url}`);

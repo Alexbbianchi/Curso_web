@@ -106,6 +106,13 @@ a img {
     button.button{
         width: 25%;
     }
+
+    h1.h1Logo{
+        text-align: initial;
+        font-size: 35px;
+        margin-left: 15px;
+        padding: 3px;
+    }
     
 }
 @media screen and (max-width: 560px) {
