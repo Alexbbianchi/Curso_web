@@ -108,6 +108,10 @@ function createUserLogo(repositories) {
 
 function error(err) {
     console.log(err);
+    if(document.querySelector('img.logo')){
+        document.querySelector('img.logo').remove();
+        document.querySelector("h1").removeAttribute("class");
+    }
     let p = document.querySelector('p');
     p.innerHTML = `${upperCaseName(usuario.value)}: Usuário inválido`;
 }

@@ -9,6 +9,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     font: normal 15pt Arial;
+    overflow: scroll;
 }
 
 header {
@@ -98,6 +99,7 @@ a img {
 @media screen and (max-width: 650px) {
     section {
         width: 95%;
+        margin-top: 25px;
     }
 
     input.input {
@@ -113,7 +115,7 @@ a img {
         margin-left: 15px;
         padding: 3px;
     }
-    
+
 }
 @media screen and (max-width: 560px) {
     section {
