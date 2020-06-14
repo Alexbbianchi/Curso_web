@@ -9,7 +9,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     font: normal 15pt Arial;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 header {

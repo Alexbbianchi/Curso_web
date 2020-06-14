@@ -380,3 +380,12 @@ h3 {
     font-family: Tahoma;
 }
 /* Fim bloco Footer 2 */
+
+@media screen and (max-width: 1020px) {
+    .redes-sociais {
+        width: 20%;
+    } 
+}
+@media screen and (max-width: 560px) {
+
+}
